@@ -58,3 +58,17 @@ return response;
 
 반환값이 `false`이면 모듈을 로드하지 못한 것으로 간주합니다.
 
+
+
+`module.json` 파일 예시입니다.
+
+```javascript
+{
+    "name" : "hello",
+    "type" : "v1g",
+    "version" : "1.0",
+    "filename" : "script.js"
+}
+```
+
+`script.js`는 위 스크립트 파일 이름 예시입니다.
