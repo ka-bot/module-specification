@@ -56,7 +56,17 @@ return response;
 
 인사 봇 예시입니다. `response`로 쓸 함수를 return해 주세요.
 
-반환값이 `false`이면 모듈을 로드하지 못한 것으로 간주합니다.
+
+
+return된 값이 `false`이면 모듈을 로드하지 못한 것으로 간주합니다.
+
+
+
+return된 함수는 true나 false를 return해야 합니다.
+
+메시지를 처리 완료해서 다른 모듈이 더 처리하지 않기를 원한다면 `true`를,
+
+다른 모듈이 그 메시지를 이어서 처리하게 하려면 `false`를 return하면 됩니다.
 
 
 
