@@ -16,14 +16,14 @@
 var v1g = [];
 var _ = {};
 // ... 생략
-let m = new Function(readFile(path))();
+let m = new Function("shared", readFile(path))(_);
 if(m) v1g.push(m);
 // ... 생략
 function response(room, msg, sender, isGroupChat, replier, imageDB)
 {
     let i;
     while(i < v1g.length && !v1g[i](
-        room, msg, sender, isGroupChat, replier, imageDB, _)) i++;
+        room, msg, sender, isGroupChat, replier, imageDB)) i++;
 }
 ```
 
@@ -36,7 +36,7 @@ function response(room, msg, sender, isGroupChat, replier, imageDB)
 ```javascript
 let lt = 0;
 
-function response(r, msg, sender, g, replier, d, shared)
+function response(r, msg, sender, g, replier, d)
 {
     if(msg == "안녕하세요")
     {
