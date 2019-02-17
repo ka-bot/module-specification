@@ -40,7 +40,7 @@ function send_ok(id)
     var deltaTime = now - lt[room];
     if(deltaTime > 1000)
     {
-        lt[room] = now;
+        lt[id] = now;
         return true;
     }
 }
